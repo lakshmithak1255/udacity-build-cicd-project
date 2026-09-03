@@ -125,12 +125,8 @@ jobs:
             --region "$AWS_REGION" \
             --name cluster
 
-      - name: Install kustomize
-        run: |
-          curl -sLo /tmp/kustomize.tar.gz \
-            https://github.com/kubernetes-sigs/kustomize/releases/latest/download/kustomize_v5.7.1_linux_amd64.tar.gz
-          tar -xzf /tmp/kustomize.tar.gz -C /tmp
-          sudo mv /tmp/kustomize /usr/local/bin/kustomize
+      - name: Setup Kustomize
+        uses: imranismail/setup-kustomize@v2
 
       - name: Update image
         working-directory: starter/frontend/k8s
