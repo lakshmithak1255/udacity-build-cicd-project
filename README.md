@@ -9,19 +9,34 @@ The team's project is comprised of 2 application.
 
 In the `starter` folder, you'll find 2 folders, one named `frontend` and one named `backend`, where each application's source code is maintained. Your job is to use the team's [existing documentation](./starter/frontend/frontend-development-notes) and create CI/CD pipelines to meet the teams' needs.
 
+## Deployment Verification
+
+### Frontend
+http://a36e134ee279d455184b63b6bffa7fd6-2011858268.us-east-1.elb.amazonaws.com
+
+The frontend successfully displays:
+- Top Gun: Maverick
+- Sonic the Hedgehog
+- A Quiet Place
+
+### Backend API
+http://aa9551878395b44be8c834cdf4307a52-318365407.us-east-1.elb.amazonaws.com/movies
+
+The backend API successfully returns the list of movies.
+
 ## Deliverables
 
 ### Frontend
 
 1. A Continuous Integration workflow that:
-   1. Runs on `pull_requests` against the `main` branch,only when code in the frontend application changes.
+   1. Runs on `pull_requests` against the `main` branch,only when code in the backend application changes.
    2. Is able to be run on-demand (i.e. manually without needing to push code)
    3. Runs the following jobs in parallel:
       1. Runs a linting job that fails if the code doesn't adhere to eslint rules
       2. Runs a test job that fails if the test suite doesn't pass
    4. Runs a build job only if the lint and test jobs pass and successfully builds the application
 2. A Continuous Deployment workflow that:
-   1. Runs on `push` against the `main` branch, only when code in the frontend application changes.
+   1. Runs on `push` against the `main` branch, only when code in the backend application changes.
    2. Is able to be run on-demand (i.e. manually without needing to push code)
    3. Runs the same lint/test jobs as the Continuous Integration workflow
    4. Runs a build job only when the lint and test jobs pass
@@ -33,14 +48,14 @@ In the `starter` folder, you'll find 2 folders, one named `frontend` and one nam
 ### Backend
 
 1. A Continuous Integration workflow that:
-   1. Runs on `pull_requests` against the `main` branch,only when code in the frontend application changes.
+   1. Runs on `pull_requests` against the `main` branch,only when code in the backend application changes.
    2. Is able to be run on-demand (i.e. manually without needing to push code)
    3. Runs the following jobs in parallel:
       1. Runs a linting job that fails if the code doesn't adhere to eslint rules
       2. Runs a test job that fails if the test suite doesn't pass
    4. Runs a build job only if the lint and test jobs pass and successfully builds the application
 2. A Continuous Deployment workflow that:
-   1. Runs on `push` against the `main` branch, only when code in the frontend application changes.
+   1. Runs on `push` against the `main` branch, only when code in the backend application changes.
    2. Is able to be run on-demand (i.e. manually without needing to push code)
    3. Runs the same lint/test jobs as the Continuous Integration workflow
    4. Runs a build job only when the lint and test jobs pass
